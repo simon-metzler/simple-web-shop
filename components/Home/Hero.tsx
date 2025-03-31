@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <div className="hero min-h-screen bg-[url(/hero.jpg)] bg-top">
@@ -11,7 +13,9 @@ export default function Hero() {
             KTM steht für Innovation, Leidenschaft und Adrenalin pur. Steig auf
             und werde Teil der KTM-Community!
           </p>
-          <button className="btn btn-success">Buy</button>
+          <Link href="#product-list" className="btn btn-success">
+            Buy
+          </Link>
         </div>
       </div>
     </div>
