@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ProductList() {
   const bikes = [
     { id: 1, name: "KTM 390 DUKE", image: "/bike1.png", price: 9999 },
@@ -11,7 +13,7 @@ export default function ProductList() {
       className="flex flex-wrap justify-center gap-4 p-4 items-end"
     >
       {bikes.map((bike) => (
-        <div className="card bg-base-200 w-96 shadow-sm">
+        <div key={bike.id} className="card bg-base-200 w-96 shadow-sm">
           <figure>
             <img src={bike.image} alt={bike.name} />
           </figure>
@@ -21,7 +23,12 @@ export default function ProductList() {
               <span className="text-xl">{bike.price}€</span>
             </div>
             <div className="card-actions justify-end">
-              <button className="btn btn-success">Buy Now</button>
+              <Link
+                href={`checkout?product_id=${bike.id}`}
+                className="btn btn-success"
+              >
+                Buy Now
+              </Link>
             </div>
           </div>
         </div>
