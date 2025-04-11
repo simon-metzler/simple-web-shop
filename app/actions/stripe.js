@@ -11,7 +11,8 @@ export async function fetchClientSecret({ p_id }) {
     { id: 3, price: "price_1RBFy1BTmGxjAB2iIWwW7YtA" },
   ];
 
-  const price = prices.find((p) => p.id === p_id);
+  const foundPrice = prices.find((p) => p.id === p_id);
+  const price = foundPrice?.price;
 
   if (!price) {
     throw new Error("Price not found");
