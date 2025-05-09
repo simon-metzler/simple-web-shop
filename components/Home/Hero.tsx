@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="hero min-h-screen bg-[url(/hero.jpg)] bg-top">
+    <div className="hero min-h-screen bg-[url(/hero.webp)] bg-top">
       <div className="hero-overlay"></div>
       <div className="hero-content text-neutral-content text-center justify-end w-full">
         <div className="max-w-md">
@@ -13,7 +13,7 @@ export default function Hero() {
             KTM steht für Innovation, Leidenschaft und Adrenalin pur. Steig auf
             und werde Teil der KTM-Community!
           </p>
-          <Link href="#product-list" className="btn btn-success">
+          <Link href="#product-list" className="btn btn-primary">
             Buy
           </Link>
         </div>

@@ -14,18 +14,18 @@ export default function ProductList() {
     >
       {bikes.map((bike) => (
         <div key={bike.id} className="card bg-base-200 w-96 shadow-sm">
-          <figure>
+          <figure className="h-64">
             <img src={bike.image} alt={bike.name} />
           </figure>
           <div className="card-body">
             <div className="flex justify-between">
-              <h2 className="text-3xl font-bold">{bike.name}</h2>
+              <h2 className="text-3xl font-bold h-12">{bike.name}</h2>
               <span className="text-xl">{bike.price}€</span>
             </div>
             <div className="card-actions justify-end">
               <Link
                 href={`checkout?product_id=${bike.id}`}
-                className="btn btn-success"
+                className="btn btn-primary"
               >
                 Buy Now
               </Link>
