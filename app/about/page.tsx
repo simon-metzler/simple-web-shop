@@ -1,90 +1,69 @@
 export default function Page() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-6">About Us</h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
-          <p className="mb-4">
-            Founded in 2023, our motorcycle shop was born from a passion for
-            two-wheeled adventures and the freedom of the open road. What
-            started as a small garage operation has grown into a trusted
-            destination for motorcycle enthusiasts.
-          </p>
-          <p className="mb-4">
-            We specialize in high-performance motorcycles, with a particular
-            focus on KTM's exceptional range of street and off-road bikes. Our
-            team consists of experienced riders who understand the needs of both
-            novice and seasoned motorcyclists.
-          </p>
-        </div>
-
-        <div className="bg-base-200 p-6 rounded-lg">
-          <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
-          <p className="mb-4">
-            We're committed to providing exceptional motorcycles that deliver
-            unmatched performance, reliability, and excitement. Our goal is to
-            help riders find the perfect machine that matches their riding style
-            and aspirations.
-          </p>
-          <p>
-            Beyond just selling motorcycles, we aim to foster a community of
-            passionate riders who share our love for the sport and lifestyle.
-            Whether you're a track day enthusiast, an off-road adventurer, or a
-            daily commuter, we're here to support your journey.
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-12">
-        <h2 className="text-2xl font-semibold mb-4">Why Choose Us?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="card bg-base-100 shadow-xl">
-            <div className="card-body">
-              <h3 className="card-title">Expertise</h3>
-              <p>
-                Our team consists of passionate riders with years of experience
-                in the motorcycle industry.
-              </p>
-            </div>
-          </div>
-
-          <div className="card bg-base-100 shadow-xl">
-            <div className="card-body">
-              <h3 className="card-title">Quality</h3>
-              <p>
-                We only offer premium motorcycles and accessories that meet our
-                high standards.
-              </p>
-            </div>
-          </div>
-
-          <div className="card bg-base-100 shadow-xl">
-            <div className="card-body">
-              <h3 className="card-title">Community</h3>
-              <p>
-                Join our growing community of riders for events, group rides,
-                and shared experiences.
-              </p>
-            </div>
+    <div className="container mx-auto px-4 py-12 space-y-8 flex flex-col items-center">
+      <section className="hero bg-base-200 rounded-2xl p-6">
+        <div className="hero-content text-center">
+          <div>
+            <h1 className="text-4xl font-bold text-primary">
+              Über KTM Motorräder
+            </h1>
+            <p className="py-2 text-secondary">
+              KTM ist seit 1953 führend in Offroad- und Straßenmotorrädern.
+              Entdecke unsere Leidenschaft für Performance und Innovation.
+            </p>
+            <button className="btn btn-primary mt-4">Mehr erfahren</button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="mt-12">
-        <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-        <p>
-          Have questions or want to learn more about our motorcycles? Feel free
-          to reach out to us at{" "}
-          <span className="font-semibold">info@simplemotoshop.com</span> or
-          visit our shop at{" "}
-          <span className="font-semibold">
-            123 Rider Street, Motorcycle City
-          </span>
-          .
-        </p>
-      </div>
+      <section>
+        <div className="card bg-base-100 shadow-md">
+          <div className="card-body">
+            <h2 className="card-title text-xl">Unsere Mission</h2>
+            <p>
+              Wir wollen das Fahrerlebnis neu definieren – mit modernster
+              Technik und kompromisslosem Design.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Unsere Werte</h2>
+        <div className="stats stats-vertical lg:stats-horizontal shadow">
+          <div className="stat">
+            <div className="stat-title">Innovation</div>
+            <div className="stat-desc">Immer einen Schritt voraus</div>
+          </div>
+          <div className="stat">
+            <div className="stat-title">Leidenschaft</div>
+            <div className="stat-desc">Adrenalin und Abenteuer</div>
+          </div>
+          <div className="stat">
+            <div className="stat-title">Teamgeist</div>
+            <div className="stat-desc">Gemeinsam stark</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Unser Team</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { name: "Max Müller", role: "CEO" },
+            { name: "Anna Schmidt", role: "Lead Designerin" },
+            { name: "Lukas Weber", role: "Technischer Leiter" },
+            { name: "Sophie Bauer", role: "Marketing-Managerin" },
+          ].map((member) => (
+            <div key={member.name} className="card bg-base-100 shadow">
+              <div className="card-body">
+                <h3 className="card-title">{member.name}</h3>
+                <p className="text-secondary">{member.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
