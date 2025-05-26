@@ -14,7 +14,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="navbar-end">
-        <Link href={"#product-list"} className="btn btn-primary">
+        <Link href={"/#product-list"} className="btn btn-primary">
           Buy
         </Link>
       </div>
